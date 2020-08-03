@@ -5,7 +5,7 @@ class Background extends StatelessWidget {
   const Background({
     Key key,
     @required this.child,
-}) : super(key: key);
+  }) super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +20,8 @@ class Background extends StatelessWidget {
             top: 0,
             left: 0,
             child: Image.asset(
-              'assets/images/main_top.png',
-              width: size.width * 0.3,
+              'assets/images/signup_top.png',
+              width: size.width * 0.35,
             ),
           ),
           Positioned(
@@ -29,7 +29,7 @@ class Background extends StatelessWidget {
             left: 0,
             child: Image.asset(
               'assets/images/main_bottom.png',
-              width: size.width * 0.2,
+              width: size.width * 0.25,
             ),
           ),
           child,
