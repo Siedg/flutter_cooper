@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cooper/Screens/Signup/components/background.dart';
-import 'package:flutter_cooper/Screens/Signup/components/or_divider.dart';
-import 'package:flutter_cooper/Screens/Signup/components/social_icon.dart';
 import 'package:flutter_cooper/components/already_have_an_account_acheck.dart';
 import 'package:flutter_cooper/components/rounded_button.dart';
 import 'package:flutter_cooper/components/rounded_input_field.dart';
+import 'package:flutter_cooper/components/rounded_password_field.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_cooper/Screens/Login/login_screen.dart';
-
+import 'background.dart';
+import 'package:flutter_cooper/Screens/Signup/signup_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -19,53 +17,41 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'SIGNUP',
+              'LOGIN',
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.03),
             SvgPicture.asset(
-              'assets/icons/signup.svg',
+              'assets/icons/login.svg',
               height: size.height * 0.35,
             ),
             RoundedInputField(
-              hintText: 'Email',
+              hintText: "Email",
+              onChanged: (value) {},
+            ),
+            RoundedPasswordField(
               onChanged: (value) {},
             ),
             RoundedButton(
-              text: 'SIGNUP',
+              text: "LOGIN",
               press: () {},
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccounCheck(
-              login: false,
               press: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
-                    },
+                      return SignUpScreen();
+                    }
                   ),
                 );
               },
-            ),
-            OrDivider(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SocialIcon(
-                  iconSrc: 'assets/icons/facebook.avg',
-                  press: () {},
-                ),
-                SocialIcon(
-                  iconSrc: 'assets/icons/google-plus.svg',
-                  press: () {},
-                )
-              ],
             )
           ],
         ),
-      )
+      ),
     );
   }
 }

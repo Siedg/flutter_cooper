@@ -3,6 +3,8 @@ import 'package:flutter_cooper/components/rounded_button.dart';
 import 'package:flutter_cooper/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'background.dart';
+import 'package:flutter_cooper/Screens/Login/login_screen.dart';
+import 'package:flutter_cooper/Screens/Signup/signup_screen.dart';
 
 class Body extends StatelessWidget {
   @override

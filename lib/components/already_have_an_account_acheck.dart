@@ -3,7 +3,7 @@ import 'package:flutter_cooper/constants.dart';
 
 class AlreadyHaveAnAccounCheck extends StatelessWidget {
   final bool login;
-  final function press;
+  final Function press;
   const AlreadyHaveAnAccounCheck({
     Key key,
     this.login = true,
