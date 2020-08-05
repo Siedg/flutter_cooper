@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cooper/constants.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 
 class SocialIcon extends StatelessWidget {
   final String iconSrc;
@@ -25,11 +25,16 @@ class SocialIcon extends StatelessWidget {
           ),
           shape: BoxShape.circle,
         ),
-        child: SvgPicture.asset(
-          iconSrc,
-          height: 20,
-          width: 20,
-        ),
+          child: Image.asset(
+            iconSrc,
+            height: 20,
+            width: 20,
+          ),
+//        child: SvgPicture.asset(
+//          iconSrc,
+//          height: 20,
+//          width: 20,
+//        ),
       ),
     );
   }

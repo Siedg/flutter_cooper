@@ -3,7 +3,6 @@ import 'package:flutter_cooper/components/already_have_an_account_acheck.dart';
 import 'package:flutter_cooper/components/rounded_button.dart';
 import 'package:flutter_cooper/components/rounded_input_field.dart';
 import 'package:flutter_cooper/components/rounded_password_field.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'background.dart';
 import 'package:flutter_cooper/Screens/Signup/signup_screen.dart';
 
@@ -21,10 +20,14 @@ class Body extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.03),
-            SvgPicture.asset(
-              'assets/icons/login.svg',
-              height: size.height * 0.35,
+            Image.asset(
+              'assets/icons/login.png',
+              height: size.height * 0.35
             ),
+//            SvgPicture.asset(
+//              'assets/icons/login.svg',
+//              height: size.height * 0.35,
+//            ),
             RoundedInputField(
               hintText: "Email",
               onChanged: (value) {},

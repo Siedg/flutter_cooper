@@ -5,7 +5,6 @@ import 'package:flutter_cooper/Screens/Signup/components/social_icon.dart';
 import 'package:flutter_cooper/components/already_have_an_account_acheck.dart';
 import 'package:flutter_cooper/components/rounded_button.dart';
 import 'package:flutter_cooper/components/rounded_input_field.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_cooper/Screens/Login/login_screen.dart';
 
 
@@ -23,12 +22,20 @@ class Body extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             SizedBox(height: size.height * 0.03),
-            SvgPicture.asset(
-              'assets/icons/signup.svg',
+            Image.asset(
+              'assets/icons/signup.png',
               height: size.height * 0.35,
             ),
+//            SvgPicture.asset(
+//              'assets/icons/signup.svg',
+//              height: size.height * 0.35,
+//            ),
             RoundedInputField(
               hintText: 'Email',
+              onChanged: (value) {},
+            ),
+            RoundedInputField(
+              hintText: 'Password',
               onChanged: (value) {},
             ),
             RoundedButton(
@@ -54,11 +61,11 @@ class Body extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SocialIcon(
-                  iconSrc: 'assets/icons/facebook.avg',
+                  iconSrc: 'assets/icons/facebook.png',
                   press: () {},
                 ),
                 SocialIcon(
-                  iconSrc: 'assets/icons/google-plus.svg',
+                  iconSrc: 'assets/icons/google-plus.png',
                   press: () {},
                 )
               ],
