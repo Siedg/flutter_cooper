@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cooper/Screens/Signup/components/or_divider.dart';
+import 'package:flutter_cooper/Services/auth.dart';
 import 'package:flutter_cooper/components/already_have_an_account_acheck.dart';
+import 'package:flutter_cooper/components/login_anon.dart';
 import 'package:flutter_cooper/components/rounded_button.dart';
 import 'package:flutter_cooper/components/rounded_input_field.dart';
 import 'package:flutter_cooper/components/rounded_password_field.dart';
@@ -10,6 +13,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final AuthService _auth = AuthService();
     return Background(
       child: SingleChildScrollView(
         child: Column(
@@ -51,7 +55,27 @@ class Body extends StatelessWidget {
                   ),
                 );
               },
-            )
+            ),
+            OrDivider(),
+            LoginAnon(
+              press: () async {
+                dynamic result = await _auth.siginInAnon();
+                if (result == null) {
+                  print('Siging in error');
+                } else {
+                  print('Signed in');
+                  print(result);
+                }
+//                Navigator.push(
+//                  context,
+//                  MaterialPageRoute(
+//                    builder: (context) {
+//                      return null;
+//                    }
+//                  ),
+//                );
+              },
+            ),
           ],
         ),
       ),
