@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cooper/constants.dart';
 import 'package:flutter_cooper/screens/home/components/body.dart';
-import 'package:flutter_cooper/screens/login/login_screen.dart';
-import 'package:flutter_cooper/screens/welcome/welcome_screen.dart';
 import 'package:flutter_cooper/services/auth.dart';
 
 class Home extends StatelessWidget {
