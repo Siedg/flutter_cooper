@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cooper/Screens/Signup/components/or_divider.dart';
-import 'package:flutter_cooper/Services/auth.dart';
+import 'package:flutter_cooper/screens/signup/components/or_divider.dart';
+import 'package:flutter_cooper/services/auth.dart';
 import 'package:flutter_cooper/components/already_have_an_account_acheck.dart';
 import 'package:flutter_cooper/components/login_anon.dart';
 import 'package:flutter_cooper/components/rounded_button.dart';
 import 'package:flutter_cooper/components/rounded_input_field.dart';
 import 'package:flutter_cooper/components/rounded_password_field.dart';
 import 'background.dart';
-import 'package:flutter_cooper/Screens/Signup/signup_screen.dart';
+import 'package:flutter_cooper/screens/signup/signup_screen.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -55,12 +55,12 @@ class Body extends StatelessWidget {
             OrDivider(),
             LoginAnon(
               press: () async {
-                dynamic result = await _auth.siginInAnon();
+                dynamic result = await _auth.signInAnon();
                 if (result == null) {
                   print('Siging in error');
                 } else {
                   print('Signed in');
-                  print(result);
+                  print(result.id);
                 }
 //                Navigator.push(
 //                  context,
