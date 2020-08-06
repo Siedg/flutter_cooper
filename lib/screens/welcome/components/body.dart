@@ -24,10 +24,6 @@ class Body extends StatelessWidget {
               'assets/icons/chat.png',
               height: size.height * 0.45,
             ),
-//            SvgPicture.asset(
-//              'assets/icons/chat.svg',
-//              height: size.height * 0.45,
-//            ),
             SizedBox(height: size.height * 0.05),
             RoundedButton(
               text: 'LOGIN',
@@ -35,9 +31,9 @@ class Body extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) {
-                        return LoginScreen();
-                      },
+                    builder: (context) {
+                      return LoginScreen();
+                    },
                   ),
                 );
               },
@@ -50,8 +46,8 @@ class Body extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) {
-                        return SignUpScreen();
+                    builder: (context) {
+                      return SignUpScreen();
                     },
                   ),
                 );

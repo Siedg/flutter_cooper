@@ -28,10 +28,6 @@ class Body extends StatelessWidget {
               'assets/icons/login.png',
               height: size.height * 0.35
             ),
-//            SvgPicture.asset(
-//              'assets/icons/login.svg',
-//              height: size.height * 0.35,
-//            ),
             RoundedInputField(
               hintText: "Email",
               onChanged: (value) {},

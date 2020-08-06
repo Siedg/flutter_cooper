@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cooper/Screens/Signup/components/or_divider.dart';
 import 'package:flutter_cooper/constants.dart';
 
 class AlreadyHaveAnAccounCheck extends StatelessWidget {
