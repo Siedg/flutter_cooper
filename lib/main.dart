@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_cooper/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter_cooper/models/user.dart';
+import 'package:flutter_cooper/screens/login/wrapper.dart';
 import 'package:flutter_cooper/services/auth.dart';
 import 'package:provider/provider.dart';
 import 'constants.dart';
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
           primaryColor: kPrimaryColor,
           scaffoldBackgroundColor: Colors.white,
         ),
-        home: WelcomeScreen(),
+        home: Wrapper(),
       ),
     );
   }
