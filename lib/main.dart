@@ -2,6 +2,9 @@ import 'dart:io' show Platform;
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter_cooper/Screens/Welcome/welcome_screen.dart';
+import 'package:flutter_cooper/models/user.dart';
+import 'package:flutter_cooper/services/auth.dart';
+import 'package:provider/provider.dart';
 import 'constants.dart';
 //import 'package:window_size/window_size.dart' as window_size;
 
@@ -32,14 +35,17 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Cooper Card',
-      theme: ThemeData(
-        primaryColor: kPrimaryColor,
-        scaffoldBackgroundColor: Colors.white,
+    return StreamProvider.value(
+      value: AuthService().user,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Cooper Card',
+        theme: ThemeData(
+          primaryColor: kPrimaryColor,
+          scaffoldBackgroundColor: Colors.white,
+        ),
+        home: WelcomeScreen(),
       ),
-      home: WelcomeScreen(),
     );
   }
 }

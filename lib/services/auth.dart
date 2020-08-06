@@ -24,7 +24,7 @@ class AuthService {
   // Retorna mudanças na autenticação do usuário
   Stream<UserModel> get user {
     return _auth.onAuthStateChanged
-        .map(_userFromFirebaseUser);
-        //.map((FirebaseUser user) => _userFromFirebaseUser(user));
+        //.map(_userFromFirebaseUser);
+        .map((FirebaseUser user) => _userFromFirebaseUser(user));
   }
 }

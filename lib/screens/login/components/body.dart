@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cooper/screens/home/home_screen.dart';
 import 'package:flutter_cooper/screens/signup/components/or_divider.dart';
 import 'package:flutter_cooper/services/auth.dart';
 import 'package:flutter_cooper/components/already_have_an_account_acheck.dart';
@@ -61,6 +62,14 @@ class Body extends StatelessWidget {
                 } else {
                   print('Signed in');
                   print(result.id);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return Home();
+                      }
+                    )
+                  );
                 }
 //                Navigator.push(
 //                  context,
